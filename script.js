@@ -81,8 +81,8 @@ function startGame() {
     setInterval(increaseTime, 1000);
 
 	// Trigger Phase 1 and Phase 2 at specific times
-	// setTimeout(startPhase1, 10000); // Trigger Phase 1 after 30 seconds
-	setTimeout(startPhase2, 10000); // Trigger Phase 2 after 60 seconds
+	setTimeout(startPhase1, 25000); // Trigger Phase 1 after 30 seconds
+	setTimeout(startPhase2, 60000); // Trigger Phase 2 after 60 seconds
 }
 
 function getRandomLocation() {
