@@ -81,8 +81,8 @@ function startGame() {
     setInterval(increaseTime, 1000);
 
 	// Trigger Phase 1 and Phase 2 at specific times
-	setTimeout(startPhase1, 10000); // Trigger Phase 1 after 30 seconds
-	setTimeout(startPhase2, 60000); // Trigger Phase 2 after 60 seconds
+	// setTimeout(startPhase1, 10000); // Trigger Phase 1 after 30 seconds
+	setTimeout(startPhase2, 10000); // Trigger Phase 2 after 60 seconds
 }
 
 function getRandomLocation() {
@@ -175,12 +175,13 @@ function startPhase2() {
 
     setTimeout(() => {
         popup.classList.add('hidden');
-        if (taps >= 100) { // Adjust the number of taps required
+        if (taps >= 30) { // Adjust the number of taps required
             nukeEffect.classList.remove('hidden');
             setTimeout(() => {
                 nukeEffect.classList.add('hidden');
                 explodeViruses();
                 showMessage('You cleared Phase 2! You won!', null);
+				final_message.classList.add('visible');
             }, 2000); // Show nuke effect for 2 seconds
         } else {
             showMessage('You failed Phase 2!', null); // No explosion on failure
