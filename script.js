@@ -68,9 +68,9 @@ function catchVirus() {
 
 function increaseScore() {
 	score++;
-	if (score >= 20) {
-		final_message.classList.add('visible');
-	}
+	// if (score >= 20) {
+	// 	final_message.classList.add('visible');
+	// }
 	scoreEl.innerHTML = `Score: ${score}`;
 }
 
